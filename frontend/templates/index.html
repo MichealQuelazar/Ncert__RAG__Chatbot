@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Q&A Helper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> NCERT Q&A Helper</h1>
+            <p class="subtitle">Ask questions about NCERT </p>
+        </header>
+
+        <main>
+            <div class="question-section">
+                <div class="input-group">
+                    <textarea 
+                        id="questionInput" 
+                        placeholder="Enter your question here..."
+                        rows="3"
+                    ></textarea>
+                    <button id="askButton" onclick="askQuestion()">
+                        <span id="buttonText">Ask Question</span>
+                        <span id="buttonLoader" class="loader" style="display: none;"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultsSection" class="results-section" style="display: none;">
+                <div class="answer-section">
+                    <h2>Answer</h2>
+                    <div id="answerContent" class="answer-content"></div>
+                </div>
+
+                <div class="documents-section">
+                    <h2>Retrieved Documents</h2>
+                    <div id="documentsContent" class="documents-content"></div>
+                </div>
+            </div>
+
+            <div id="errorSection" class="error-section" style="display: none;">
+                <div class="error-content">
+                    <h3>⚠️ Error</h3>
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="info-card">
+                <h3>About</h3>
+                <p>This Q&A system uses RAG (Retrieval-Augmented Generation) to answer questions based on NCERT Physics Class 12 textbooks.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>How to Use</h3>
+                <ol>
+                    <li>Type your question in the text box</li>
+                    <li>Click "Ask Question"</li>
+                    <li>View the answer and source documents</li>
+                </ol>
+            </div>
+
+            <div class="info-card">
+                <h3>Example Questions</h3>
+                <ul class="example-questions">
+                    <li onclick="setQuestion(this)">What is Newton's first law of motion?</li>
+                    <li onclick="setQuestion(this)">Explain electromagnetic induction</li>
+                    <li onclick="setQuestion(this)">What is the photoelectric effect?</li>
+                    <li onclick="setQuestion(this)">Define electric field</li>
+                </ul>
+            </div>
+
+            <div class="status-indicator">
+                <span id="statusDot" class="status-dot"></span>
+                <span id="statusText">Checking status...</span>
+            </div>
+        </aside>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
