@@ -9,7 +9,7 @@
 
 ## 🎯 Overview
 
-This application transforms NCERT Physics textbooks into an intelligent Q&A system. Ask questions in natural language and get accurate answers with source citations.
+This application transforms NCERT textbooks into an intelligent Q&A system. Ask questions in natural language and get accurate answers with source citations.
 
 ## 🏗️ Architecture
 
