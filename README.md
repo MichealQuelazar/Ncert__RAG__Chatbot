@@ -196,6 +196,17 @@ Edit `backend/config/settings.py` or use environment variables to configure:
 - Ensure backend is running on port 8000
 - Check BACKEND_URL in frontend configuration
 
-## License
+## Contributor Guide
 
-MIT
+You may follow these steps to contribute:
+
+Fork the official repository. This will create a copy of the official repository in your own account.
+Sync the branches. This will ensure that your copy of the repository is up-to-date with the latest changes from the official repository.
+Work on your forked repository's feature branch. This is where you will make your changes to the code.
+Commit your updates on your forked repository's feature branch. This will save your changes to your copy of the repository.
+Submit a pull request to the official repository's main branch. This will request that your changes be merged into the official repository.
+Resolve any linting errors. This will ensure that your changes are formatted correctly.
+Here are some additional things to keep in mind during the process:
+
+Test your changes. Before you submit a pull request, make sure that your changes work as expected.
+Be patient. It may take some time for your pull request to be reviewed and merged.
